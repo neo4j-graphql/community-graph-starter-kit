@@ -9,6 +9,8 @@ import {
 import App from './App';
 import './index.css';
 
+// Initialize Apollo Client, read more at:
+// http://dev.apollodata.com/react/initialization.html
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
     uri: 'http://graphql.communitygraph.org/graphql/',

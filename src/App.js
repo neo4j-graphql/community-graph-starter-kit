@@ -3,6 +3,8 @@ import { graphql, gql } from 'react-apollo';
 
 import './App.css';
 
+// Data arrives in the `data` prop
+// Read more in http://dev.apollodata.com/react/queries.html
 class App extends Component {
   renderList() {
     if (this.props.data.loading) {
@@ -35,6 +37,7 @@ class App extends Component {
   }
 }
 
+// Declare a query tagged with "gql"
 // Write new queries here: http://graphql.communitygraph.org/graphiql/
 const query = gql`
   {
@@ -55,4 +58,5 @@ const query = gql`
   }
 `;
 
+// Attach the query to the component
 export default graphql(query)(App);
